@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Products</title>
 </head>
+
 <body>
-     <!-- Responsive Navbar -->
-     <nav class="bg-green-200 p-3 flex justify-between items-center shadow-xl sticky top-0 z-10">
+    <!-- Responsive Navbar -->
+    <nav class="bg-green-200 p-3 flex justify-between items-center shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl ">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -29,33 +31,61 @@
             </li>
         </ul>
     </nav>
-<!-- products -->
-    <section class="text-center p-5">
-        <div class="mt-10">
-            <h1 class="text-4xl font-bold mt-5">Our Products</h1>
-            <input type="text" placeholder="Search for a Product..." class="border border-black w-9/12 p-2 mt-5">
+
+    <!-- Side Navbar -->
+    <section id="sidenav" class="bg-green-200 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 50%;right: -50%; height: 100vh;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
         </div>
-        <div class="mt-5 gap-5 grid grid-cols-2 md:grid-cols-4">
+
+        <ul class="flex flex-col items-center gap-10 text-gray-600">
+            <li class="hover:underline hover:text-black">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="hover:underline hover:text-black">
+                <a href="product.html">Products</a>
+            </li>
+            <li class="hover:underline hover:text-black">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+
+    </section>
+
+    <!-- search bar -->
+    <div class="mt-10 text-center">
+        <h1 class="text-4xl font-bold mt-5">Our Products</h1>
+        <input id="search" type="text" placeholder="Search for a Product..."class="border border-black w-9/12 p-2 mt-5">
+    </div>
+
+    <!-- products -->
+    <section class="text-center p-5">
+        <div id="product-container" class="mt-5 gap-5 grid grid-cols-2 md:grid-cols-4">
             <div>
-                <img src="./images/rose.png" alt="IMAGE-1" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <img src="./images/rose.png" alt="IMAGE-1"
+                    class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h2>Rose Plant</h2>
                 <p>$ 40</p>
             </div>
 
             <div>
-                <img src="./images/Jasmine.png" alt="IMAGE" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <img src="./images/Jasmine.png" alt="IMAGE"
+                    class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h2>Jasmine Plant</h2>
                 <p>$ 30</p>
             </div>
 
-            <div >
-                <img src="./images/Adenium.png" alt="IMAGE" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <div>
+                <img src="./images/Adenium.png" alt="IMAGE"
+                    class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h2>Adenium</h2>
                 <p>$ 20</p>
             </div>
 
-            <div >
-                <img src="./images/Snake Plant.png" alt="IMAGE" class="inline hover:shadow-xl transform hover:-translate-y-2">
+            <div>
+                <img src="./images/Snake Plant.png" alt="IMAGE"
+                    class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h2>Snake Plant</h2>
                 <p>$ 30</p>
             </div>
@@ -65,17 +95,20 @@
                 <p>$ 50</p>
             </div>
             <div>
-                <img src="./images/Money -Plant.png" alt="IMAGE" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <img src="./images/Money -Plant.png" alt="IMAGE"
+                    class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h2>Money Plant</h2>
                 <p>$ 15</p>
             </div>
             <div>
-                <img src="./images/Hibiscus.png" alt="IMAGE" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <img src="./images/Hibiscus.png" alt="IMAGE"
+                    class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h2>Hibiscus Plant</h2>
                 <p>$ 20</p>
             </div>
             <div>
-                <img src="./images/Anthurium.png" alt="IMAGE" class="inline hover:shadow-xl transform hover:-translate-y-2">
+                <img src="./images/Anthurium.png" alt="IMAGE"
+                    class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h2>Anthurium Plant</h2>
                 <p>$ 40</p>
             </div>
@@ -85,13 +118,17 @@
 
 
 
-     <!-- FOOTER -->
-     <section class="bg-green-200 mt-5 p-10 flex flex-col gap-5">
+    <!-- FOOTER -->
+    <section class="bg-green-200 mt-5 p-10 flex flex-col gap-5">
         <h1 class="font-bold text-4xl">Greenden</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit commodi asperiores nemo aspernatur inventore obcaecati!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit commodi asperiores nemo aspernatur inventore
+            obcaecati!</p>
         <p>@ 2021 Greenday.com</p>
     </section>
 
-    
+    <script src="product.js"></script>
+
+
 </body>
+
 </html>
